@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const index = this.getAttribute('data-index');
             const cartinhasAbertas = cartinhasAbertasHoje();
 
-            if (cartinhasAbertas < MAX_CARTINHAS_POR_DIA || this.style.pointerEvents === 'none') {
+            if (this.style.pointerEvents === 'none' || cartinhasAbertas < MAX_CARTINHAS_POR_DIA) {
                 exibirMensagem(index);
                 if (this.style.pointerEvents !== 'none') {
                     incrementarCartinhasAbertas();
