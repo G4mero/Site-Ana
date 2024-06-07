@@ -8,6 +8,7 @@ body {
     background-image: url('foto-ana.jpg'); /* Substitua pelo caminho da sua imagem */
     background-size: cover;
     background-position: center;
+    backdrop-filter: blur(10px);
 }
 
 .container {
