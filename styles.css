@@ -8,7 +8,6 @@ body {
     background-image: url('foto-ana.jpg'); /* Substitua 'sua-imagem-de-fundo.jpg' pelo caminho da sua imagem */
     background-size: cover;
     background-position: center;
-    filter: brightness(0.7) grayscale(0.5); /* Ajuste os valores do filtro conforme desejado */
 }
 
 
