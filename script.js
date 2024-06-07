@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
         "Ana, você ilumina meus dias!",
         "Ana, amo você mais a cada dia!",
         "Ana, você é incrível!",
-        // Adicione mais mensagens aqui, total de 50
         "Ana, você é a minha inspiração.",
         "Ana, você me faz feliz.",
         "Ana, você é a luz da minha vida.",
