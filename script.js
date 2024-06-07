@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const cartinhas = document.querySelectorAll('.cartinha');
     const mensagemContainer = document.getElementById('mensagemContainer');
+    const contadorContainer = document.getElementById('contadorContainer');
+    const MAX_CARTINHAS_POR_DIA = 5;
     
     // Função para obter a data atual como uma string no formato YYYY-MM-DD
     function obterDataAtual() {
@@ -39,12 +41,27 @@ document.addEventListener('DOMContentLoaded', function() {
         mensagemContainer.textContent = mensagens[index];
     }
 
+    // Função para atualizar o contador de cartinhas abertas hoje
+    function atualizarContadorCartinhasAbertas() {
+        const cartinhasAbertas = cartinhasAbertasHoje();
+        contadorContainer.textContent = `Você abriu ${cartinhasAbertas} de ${MAX_CARTINHAS_POR_DIA} cartinhas hoje.`;
+        if (cartinhasAbertas >= MAX_CARTINHAS_POR_DIA) {
+            mensagemContainer.textContent = "Você já viu todas as cartinhas do dia! Volte amanhã para mais surpresas.";
+        }
+    }
+
     // Adicionar evento de clique a todas as cartinhas
     cartinhas.forEach(cartinha => {
         cartinha.addEventListener('click', function() {
             const index = this.getAttribute('data-index');
             exibirMensagem(index);
             incrementarCartinhasAbertas();
+            atualizarContadorCartinhasAbertas();
+            this.style.pointerEvents = 'none'; // Desabilitar clique na cartinha já aberta
+            this.style.opacity = '0.5'; // Visualizar que a cartinha foi aberta
         });
     });
+
+    // Atualizar o contador de cartinhas abertas ao carregar a página
+    atualizarContadorCartinhasAbertas();
 });
