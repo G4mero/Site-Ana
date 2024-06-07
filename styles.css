@@ -23,19 +23,31 @@ h1 {
     margin-bottom: 20px;
 }
 
-button {
-    background-color: #ff4081;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background-color 0.3s;
+.cartinhas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
-button:hover {
-    background-color: #ff79a1;
+.cartinha {
+    width: 60px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.cartinha img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cartinha:hover {
+    transform: scale(1.1);
 }
 
 .mensagem-container {
