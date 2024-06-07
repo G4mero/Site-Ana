@@ -10,21 +10,42 @@
 <body>
     <div class="container">
         <h1>Bem-vinda, Ana!</h1>
-        <div class="cartinhas-container">
-            <!-- 50 Cartinhas -->
-            <div class="cartinha" data-index="0"><img src="cartinha.png" alt="Cartinha"></div>
-            <div class="cartinha" data-index="1"><img src="cartinha.png" alt="Cartinha"></div>
-            <div class="cartinha" data-index="2"><img src="cartinha.png" alt="Cartinha"></div>
-            <div class="cartinha" data-index="3"><img src="cartinha.png" alt="Cartinha"></div>
-            <div class="cartinha" data-index="4"><img src="cartinha.png" alt="Cartinha"></div>
-
-
-            <!-- Repita até 50 -->
+        <div class="tabs">
+            <button class="tablink active" onclick="openTab(event, 'Cartinhas')">Cartinhas</button>
+            <button class="tablink" onclick="openTab(event, 'Galeria')">Galeria de Fotos</button>
         </div>
-        <div id="mensagemContainer" class="mensagem-container">
-            <!-- Mensagem será exibida aqui -->
+        <div id="Cartinhas" class="tabcontent" style="display: block;">
+            <div class="cartinhas-container">
+                <!-- 50 Cartinhas -->
+                <div class="cartinha" data-index="0"><img src="cartinha.png" alt="Cartinha"></div>
+                <div class="cartinha" data-index="1"><img src="cartinha.png" alt="Cartinha"></div>
+                <div class="cartinha" data-index="2"><img src="cartinha.png" alt="Cartinha"></div>
+                <!-- Repita até 50 -->
+            </div>
+            <div id="mensagemContainer" class="mensagem-container">
+                <!-- Mensagem será exibida aqui -->
+            </div>
+            <div id="contadorContainer" class="contador-container">
+                <!-- Contador de cartinhas abertas será exibido aqui -->
+            </div>
+        </div>
+        <div id="Galeria" class="tabcontent">
+            <div class="galeria-container">
+                <!-- Adicione suas fotos aqui -->
+                <img src="foto1.jpg" alt="Foto 1" class="galeria-foto">
+                <img src="foto2.jpg" alt="Foto 2" class="galeria-foto">
+                <img src="foto3.jpg" alt="Foto 3" class="galeria-foto">
+                <!-- Adicione mais fotos conforme necessário -->
+            </div>
         </div>
     </div>
+    
+    <!-- Modal para exibir imagens -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
