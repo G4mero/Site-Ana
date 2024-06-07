@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cartinhas = document.querySelectorAll('.cartinha');
     const mensagemContainer = document.getElementById('mensagemContainer');
     const contadorContainer = document.getElementById('contadorContainer');
-    const MAX_CARTINHAS_POR_DIA = 5;
+    const MAX_CARTINHAS_POR_DIA = 50;
 
     const mensagens = [
         "Ana, você é a razão do meu sorriso!",
